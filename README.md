@@ -4,3 +4,4 @@
 2- Created the project via applying the project module.</p>
 3- Created the database instance and focused on the mysql, the version is listed.</p>
 4- Added username and password components definitions to the database element.</p>
+5- Added the cluster components to the strucutre</p>
