@@ -25,6 +25,11 @@ variable "network_name" {
   default = "gcpkspl-k8s-network"
 }
 
+variable "subnetwork_name" {
+  type = string
+  default = "gcpkspl-subnetwork"
+}
+
 variable "cluster_name" {
   default = "gcpkspl-cluster"
 }
