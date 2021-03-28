@@ -1,4 +1,6 @@
-**/terraform.tfstate*
+**/terraform.tfstate
+.terraform.lock.hca
+.terraforml
 **/.terraform/
 **/backend.tf
 **/terraform.tfvars
