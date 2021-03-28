@@ -15,7 +15,7 @@ resource "google_compute_subnetwork" "gcpkspl-public-subnetwork" {
 }
 
 resource "google_sql_database" "database" {
-  name     = "my-database"
+  name     = "gcpkspl-database"
   instance = google_sql_database_instance.db-instance.name
 }
 
@@ -29,6 +29,14 @@ resource "google_sql_database_instance" "db-instance" {
   deletion_protection = "true"
 }
 
+resource "google_sql_user" "db-user" {
+  count    = var.db-count
+  name     = var.db-user-name
+  project  = var.projectName
+  instance = google_sql_database_instance.db-instance.name
+  host     = var.database-instance-name
+  password = var.db-user-password
+}
 
 
 

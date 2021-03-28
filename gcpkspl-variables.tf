@@ -36,3 +36,19 @@ variable "database-instance-name" {
 variable "db-version" {
     default = "MYSQL_5_6"
 }
+
+variable "db-count" {
+    type = string
+    default = "1"
+}   
+variable "db-user-name"   {   
+      type = string
+      default = "admin"
+}
+
+  variable "db-user-password" {
+
+      type = string
+      default = "43rgrhotfssfk"
+  }
+  
