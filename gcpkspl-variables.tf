@@ -29,4 +29,10 @@ variable "cluster_name" {
   default = "gcpkspl-cluster"
 }
 
+variable "database-instance-name" {
+    default = "gcpkspl-db"
+}
 
+variable "db-version" {
+    default = "MYSQL_5_6"
+}
