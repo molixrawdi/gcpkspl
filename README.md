@@ -8,4 +8,5 @@
 6- Tag the 'docker image to recommended to prepare for upload to Google docker repo/registry.</p>
 ```
 docker tag  dockerexercisetest/docker_exercise:latest gcr.io/gcpkspl/pett-app:latest
+docker push gcr.io/gcpkspl/pett-app:latest
 ```
