@@ -10,3 +10,10 @@
 docker tag  dockerexercisetest/docker_exercise:latest gcr.io/gcpkspl/pett-app:latest
 docker push gcr.io/gcpkspl/pett-app:latest
 ```
+7- Building the docker image for the container based Jenkins:</p>
+```
+docker build -t jenkins:gcpkspl .
+```
+This has packed the plugins that I have tested for a period of one year and have confidence that they will satisfy most cicd needs.</p>
+The file with the plugin list is: </p>
+
