@@ -90,55 +90,31 @@ module "gce-container" {
 
 #### 2nd container for Jenkins #########
 
-container = {
-    # image="gcr.io/google-samples/hello-app:1.0"
-    image="gcr.io/gcpkspl/pett-app:latest"
-    # env = [
-    #   {
-    #     name = "TEST_VAR"
-    #     value = "Hello World!"
-    #   }
-    # ],
 
-    # Declare volumes to be mounted.
-    # This is similar to how docker volumes are declared.
-    volumeMounts = [
-      {
-        mountPath = "/cache"
-        name      = "tempfs-0"
-        readOnly  = false
-      },
-      {
-        mountPath = "/persistent-data"
-        name      = "data-disk-0"
-        readOnly  = false
-      },
-    ]
-  }
-
-
-#### end 2nd container for Jenkins #####
-
-  # Declare the Volumes which will be used for mounting.
-  volumes = [
-    {
-      name = "tempfs-0"
-
-      emptyDir = {
-        medium = "Memory"
-      }
-    },
-    {
-      name = "data-disk-0"
-
-      gcePersistentDisk = {
-        pdName = "data-disk-0"
-        fsType = "ext4"
-      }
-    },
-  ]
 
   restart_policy = "Always"
 }
 
 
+### volumes for Jenkins
+
+# volumes = [
+#     {
+#       name = "tempfs-01"
+
+#       emptyDir = {
+#         medium = "Memory"
+#       }
+#     },
+#     {
+#       name = "data-disk-01"
+
+#       gcePersistentDisk = {
+#         pdName = "data-disk-01"
+#         fsType = "ext4"
+#       }
+#     },
+#   ]
+
+#   restart_policy = "Always"
+# }
