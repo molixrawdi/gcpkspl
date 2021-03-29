@@ -5,3 +5,7 @@
 3- Created the database instance and focused on the mysql, the version is listed.</p>
 4- Added username and password components definitions to the database element.</p>
 5- Added the cluster components to the strucutre</p>
+6- Tag the 'docker image to recommended to prepare for upload to Google docker repo/registry.</p>
+```
+docker tag  dockerexercisetest/docker_exercise:latest gcr.io/gcpkspl/pett-app:latest
+```
